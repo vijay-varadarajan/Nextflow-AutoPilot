@@ -1,0 +1,1 @@
+Create a nextflow workflow with one module and one process in it that uses samtools to index the input files.
