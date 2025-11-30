@@ -1,4 +1,6 @@
-# Nextflow Workflow Generator Agent
+<h1 align="center">Nextflow Workflow Generator Agent</h1>
+
+![Thumbnail](thumbnail.png)
 
 ### Problem Statement
 Bioinformatics and data science pipelines often require complex orchestration using tools like Nextflow. Setting up a new Nextflow project involves a significant amount of boilerplate code: creating a standard directory structure, defining processes, writing configuration files, and setting up testing frameworks. This repetitive setup process is prone to errors and takes valuable time away from the actual logic implementation. Automating the generation of a robust, testable Nextflow project structure from a simple natural language description is a valuable tool for developers and scientists.
@@ -11,8 +13,10 @@ Generating a complete software project is a multi-step process that requires "re
 
 A sequential chain of specialized agents allows us to break down this complex task into manageable units (Planning -> Structure -> Testing -> Configuration -> Assembly), ensuring high-quality output for each component.
 
-### What you created
+### My solution
 I built a **Sequential Agent Pipeline** using the **Google Agent Development Kit (ADK)**. The architecture consists of a linear chain of five specialized agents, orchestrated by a root `SequentialAgent`.
+
+![AgenticFlow](agenticflow.png)
 
 **The Agent Pipeline:**
 1.  **TodoAgent:** Analyzes the user prompt and input files to extract project metadata (Project Name, Process Name) and creates an implementation plan.
