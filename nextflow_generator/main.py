@@ -6,8 +6,10 @@ from google.genai import types
 import os, asyncio
 from pathlib import Path
 from google.adk.apps.app import App, EventsCompactionConfig
+from dotenv import load_dotenv
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDlr5gPdRT1ieJ08vG116xjkJ_S6F3hhfQ"
+load_dotenv()
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY", "")
 
 retry_config=types.HttpRetryOptions(
     attempts=5,  # Maximum retry attempts
